@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css" />
+
+    <style>
+      p {
+        color: red;
+      }
+
+      .yellow {
+        color: yellow;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <h1>3种样式的优先级</h1>
+    <ul>
+      <li><p>行内样式优先级最高</p></li>
+      <li><p>内联样式和外部样式在书写时，如果样式发生冲突，</p></li>
+      <li><p>在优先级相同的情况下，以写在后面的为主</p></li>
+      <li><p>如果优先级不相同，则以优先级高的为主。</p></li>
+    </ul>
+
+    <p>我是红色</p>
+    <p style="color: green">我是绿色</p>
+    <!-- class优先级高一点 -->
+    <p class="yellow">我是黄色</p>
+  </body>
+</html>
