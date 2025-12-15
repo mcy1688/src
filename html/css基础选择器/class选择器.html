@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <style>
+    .box{
+      color: red;
+    }
+    .class{
+      color: red;
+      font-size: 20px;
+    }
+    /* 这个class类 表示为文字大小12px的类  这种就是原子类  */
+    .fs12{
+      font-size: 12px;
+    }
+    /* 这个class类 表示为文字居中类    */
+    .center{
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>class选择器</h1>
+
+  <p>页面中可以出现n个class名,名字相同,选中多个标签</p>
+  <p>一个元素可以有多个class名,一个class名可以有多个元素</p>
+  <p>多个class名需要用空格隔开,不同标签的相同样式放在同一类名中，可以减少代码量</p>
+
+
+  <div class="box">我是box</div>
+  <div class="box">我是box</div>
+  <div class="box">我是box</div>
+  <div class="box">我是box</div>
+
+  <p class="class center fs12">
+    原子类:我们可以将常用字号,文字颜色,行高,外边距,宽高等定义成一个单独的类class,
+    然后在html中按需选择应用,选择
+
+    大大的减少项目的体积,缺点:class名字变多,阅读性会变差
+  </p>
+
+  <p class="center fs12">摇树优化: css框架定义12px~100px的类,但是项目中只用了一个12px的类, 所以其所有没用到的类会全部ps掉.</p>
+</body>
+</html>

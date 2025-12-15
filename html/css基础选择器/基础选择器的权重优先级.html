@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*  *通配符 */
+    *{
+      color: blue;
+    }
+    #red{
+      color: red;
+    }
+    .red{
+      color: red;
+    }
+    header{
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>基础选择器的权重优先级</h1>
+  <p>权重从高到低依次是：行内样式 > id 选择器 > 类选择器 > 标签选择器 > *通配符</p>
+  <p>如果选择器级别相同，后面的会覆盖前面的</p>
+
+
+  <p class="red" style="color: red;">行内样式>class、id </p>
+  <p id="red" class="red">id 选择器>class</p>
+  <p class="red">类选择器>标签选择器</div>
+  <header class="red">标签选择器>*通配符</header>
+
+</body>
+</html>
