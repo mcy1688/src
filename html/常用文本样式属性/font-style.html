@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      table {
+        border: 1px solid red;
+        border-collapse: collapse;
+      }
+      i {
+        font-style: normal;
+      }
+      .font_style {
+        font-style: italic;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>font-style 字体样式</h1>
+    <p>font-style 属性设置字体的倾斜</p>
+
+    <i>我是i标签,我被取消倾斜</i>
+
+    <p class="font_style">我是p标签,设置为斜体</p>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>属性</th>
+          <th>描述</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>normal</td>
+          <td>正取消倾斜，如：把天生倾斜的 i、em 等标签设置为 不倾斜</td>
+        </tr>
+        <tr>
+          <td>italic</td>
+          <td>
+            设置为倾斜字体（常用）
+            如果当前字体没有可用的斜体版本，会选用（oblique ）替代
+          </td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td>oblique</td>
+          <td>设置为倾斜字体（用常规字体模拟，不常用）</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
