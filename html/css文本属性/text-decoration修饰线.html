@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red_text {
+        /* 简写 */
+        text-decoration: underline red wavy 10px;
+      }
+      .green_text {
+        text-decoration-line: line-through;
+        text-decoration-style: solid;
+        text-decoration-color: green;
+        text-decoration-thickness: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>css文本属性</h1>
+
+    <p>
+      包含内容 修饰线，首行缩进，行高，font
+      属性复合写法，内容水平居中，字间距，字符间距
+    </p>
+
+    <p>
+      text-decoration 修饰线 : none 没有修饰线; underline 下划线; line-through
+      删除线;
+    </p>
+    <h2>text-decoration 为简写属性:</h2>
+
+    <ul>
+      <li>-line:文本修饰的位置，如下划线underline，删除线line-through</li>
+      <li>-color:文本修饰的颜色</li>
+      <li>
+        -style:文本修饰的样式，如
+        <strong>波浪线wavy,实线solid,虚线dashed</strong>
+      </li>
+      <li>-thickness:文本修饰线的粗细</li>
+    </ul>
+
+    <p class="red_text">文本内容</p>
+    <p class="green_text">文本内容</p>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .line_height_px {
+        border: 1px solid red;
+        line-height: 30px;
+      }
+      .line_height_number {
+        border: 1px solid red;
+        font-size: 20px;
+        line-height: 2;
+      }
+      .line_height_Percentage {
+        border: 1px solid red;
+        font-size: 20px;
+        line-height: 200%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>line-height 行高</h1>
+    <p>
+      line-height 是 CSS
+      中用于控制行间距的属性，但它也常被用来实现单行文本在容器内的垂直居中效果
+    </p>
+
+    行高的四种写法
+    <p class="line_height_px">行高为 30px</p>
+    <p class="line_height_number">
+      行高为 font-size 的倍数，如果font-size:20px;则line-height:2;表示行高为
+      40px,上边20px 下边20px
+    </p>
+    <p class="line_height_Percentage">
+      行高为 font-size 的百分比，如果font-size:20px，则line-height:40px;
+    </p>
+    <p>
+      <strong>normal默认值</strong> ,大约为line-height:1.2.
+      但具体是多少,取决于元素的 font-family。实际开发中,一般不会用这个值
+    </p>
+
+    <p>
+      推荐在 body 中设置 line-height 时使用无单位数值，比如 1.5
+      ，来控制整个页面的文字默认行高 主段落内容的 line-height 至少应为 1.5
+      实际工作中行高：1.25 , 1.5 , 1.75 都是常用的倍数设置
+      如果文字的大小要随页面的缩放而变化，请使用无单位的值，以确保行高也会等比例缩放。(移动端或响应式网站常用)
+    </p>
+  </body>
+</html>

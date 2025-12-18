@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p {
+        font-size: 20px;
+      }
+
+      .px {
+        /* font-size 20px  20px为一个字的字符*/
+        text-indent: 20px;
+      }
+      .em {
+        /* 1em是一个字符的宽度,2em表示 2 个字符的宽度 */
+        text-indent: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>text-indent 首行缩进</h1>
+
+    <ul>
+      <li>text-indent 属性定义首行文本内容之前的缩进量</li>
+      <li>比如：一般段落文字的第一行，会向内 缩进两个字的间距大小</li>
+      <li>
+        常用单位是em，em 是 CSS 中一个相对长度单位，1em
+        相对于当前元素的字体大小（font-size）；如果当前元素无
+        font-size属性，则相当于父元素的font-size 大小。
+      </li>
+      <li>1em是一个字符的宽度,2em表示 2 个字符的宽度,</li>
+    </ul>
+    <p>文本内容文本内容文本内容文本内容</p>
+    <p class="px">文本内容文本内容文本内容文本内容</p>
+    <p class="em">文本内容文本内容文本内容文本内容</p>
+  </body>
+</html>
