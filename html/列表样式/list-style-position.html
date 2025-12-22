@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        /* list-style-position: outside; */
+        list-style-position: inside;
+      }
+
+      ul li {
+        /* list-style-type: none; */
+      }
+      .inside li {
+        border: 1px solid red;
+        list-style-position: inside;
+      }
+      .outside li {
+        list-style-position: outside;
+        border: 1px solid red;
+      }
+      .initial li {
+        list-style-position: initial;
+        border: 1px solid red;
+      }
+      .inherit {
+        list-style-position: inherit;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>list-style-position</h1>
+    <p>规定列表中列表项目标记的位置 ，几乎不用，了解就好</p>
+    <ul>
+      <li>inside:列表项目标记放置在文本以内，且环绕文本根据标记对齐。</li>
+      <li>
+        outside:列默认值。保持标记位于文本的左侧。列表项目标记放置在文本以外，且环绕文本不根据标记对齐。
+      </li>
+      <li>inherit:规定应该从父元素继承 list-style-position 属性的值。</li>
+      <li>initial:使用属性的初始默认值为outside。</li>
+    </ul>
+    <ul class="inside">
+      <li>inside:列表项目标记放置在文本以内，且环绕文本根据标记对齐。</li>
+    </ul>
+    <ul class="outside">
+      <li>
+        outside:列默认值。保持标记位于文本的左侧。列表项目标记放置在文本以外，且环绕文本不根据标记对齐。
+      </li>
+    </ul>
+    <ul class="initial">
+      <li>initial:使用属性的初始默认值为outside。</li>
+    </ul>
+    <ul class="inherit">
+      <li>inherit:规定应该从父元素继承 list-style-position 属性的值。</li>
+    </ul>
+  </body>
+</html>
