@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .padding{
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>padding内边距</h1>
+    <p>padding 是盒子的内边距，即边框内壁到内容区之间的距离</p>
+
+    <dl>
+      <dt>padding 有四个方向，可以通过以下属性分别设置不同方向内边距</d>
+      <dd>padding-top:上内边距</dd>
+      <dd>padding-right:右内边距</dd>
+      <dd>padding-bottom:下内边距</dd>
+      <dd>padding-left:左内边距</dd>
+    </dl>
+
+    <div class="padding"> 我是内边框</div>
+
+    <dl>
+      <dt>padding 属性，4 值不同写法</dt>
+      <dd>一个值: padding: 20px;  四个方向的内边距大小都是20px;</dd>
+      <dd>2 个值: padding: 20px 30px; 第一个值代表上下内边距20px，第二个值是左右内边距30px  </dd>
+      <dd>3 个值: padding: 20px 10px 30px; 值1代表上内边距20px  值2代表左右内边距 10px   值3 代表下内边距30px</dd>
+      <dd>4 个值: padding: 10px 20px 30px 40px; padding:上   右   下   左  ;  四个方向值</dd>
+    </dl>
+
+
+    <p>应用场景： 如果设置父子间间距，可以给父元素添加内边距来实现</p>
+    <p>快速记忆：左右是一对，上下是一对，缺下时和上一样，缺左时和右一样。</p>
+
+    <h2> 快速灵活设置 padding 属性</h2>
+    <p>小属性 padding-top/padding-right/padding-bottom/padding-left 用来层叠大属性 padding 来组合使用,
+      
+      <strong>padding: 40px;</strong><strong>padding-bottom: 0;</strong>
+    </p>
+  </body>
+</html>

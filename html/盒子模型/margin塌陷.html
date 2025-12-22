@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .margin {
+        width: 100px;
+        height: 100px;
+        margin: 50px 0;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>margin 的塌陷</h1>
+    <p>margin 塌陷也叫：外间距重叠 或 外边距合并 或 外边距穿透</p>
+    <p>兄弟元素之间 ，垂直方向：上下外边距出现塌陷</p>
+
+    <p>
+      垂直方向的 margin
+      有塌陷现象，上一个元素的下外边距与下一个元素的上外边距会发生合并
+    </p>
+    <p>小的 margin 会塌陷到大的 margin 中，从而 margin 不叠加，只以大值为准</p>
+    <p>以下两盒子之间间距为 100px ，垂直方向的 margin 不叠加，以大数为准</p>
+
+    <div class="margin">下面是50px</div>
+    <div class="margin">上面是50px</div>
+    <h2>解决办法:</h2>
+    <p>方法一：任何一个元素加上 display:inline-block;</p>
+    <p>方法二：把外边距只加在其中一个元素上</p>
+    <p>方法三：选择把任意一个元素的外边距换成对应的 padding</p>
+  </body>
+</html>

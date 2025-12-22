@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+      }
+
+      div {
+        margin-bottom: 10px;
+      }
+
+      .solid {
+        border: 3px solid red;
+      }
+      .dashed {
+        border: 3px dashed red;
+      }
+      .dotted {
+        border: 3px dotted red;
+      }
+      .double {
+        border: 3px double red;
+      }
+      .groove {
+        border: 3px groove red;
+      }
+      .ridge {
+        border: 3px ridge red;
+      }
+      .inset {
+        border: 3px inset red;
+      }
+      .outset {
+        border: 3px outset red;
+      }
+      .none {
+        border: none;
+      }
+      .hidden {
+        border: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>border 属性 - 边框</h1>
+    <p>
+      border 属性的三要素： border 属性的值由三部分组成：线宽 线型（风格）
+      颜色；
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>常见线型值</th>
+          <th>描述</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>solid</td>
+          <td>实线</td>
+        </tr>
+        <tr>
+          <td>dashed</td>
+          <td>虚线</td>
+        </tr>
+        <tr>
+          <td>dotted</td>
+          <td>点状线</td>
+        </tr>
+        <tr>
+          <td>double</td>
+          <td>双边框</td>
+        </tr>
+        <tr>
+          <td>groove</td>
+          <td>定义 3D 凹槽边框。效果取决于 border-color 值</td>
+        </tr>
+        <tr>
+          <td>ridge</td>
+          <td>定义 3D 垄状边框。效果取决于 border-color 值</td>
+        </tr>
+        <tr>
+          <td>inset</td>
+          <td>3D inset 边框。其效果取决于 border-color 的值。</td>
+        </tr>
+        <tr>
+          <td>outset</td>
+          <td>3D outset 边框。其效果取决于 border-color 的值。</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>无边框</td>
+        </tr>
+        <tr>
+          <td>hidden</td>
+          <td>隐藏边框</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="solid">实线</div>
+    <div class="dashed">虚线</div>
+    <div class="dotted">点状线</div>
+    <div class="double">双边框</div>
+    <div class="groove">定义 3D 凹槽边框。效果取决于 border-color 值</div>
+    <div class="ridge">定义 3D 垄状边框。效果取决于 border-color 值</div>
+    <div class="inset">3D inset 边框。其效果取决于 border-color 的值。</div>
+    <div class="outset">3D outset 边框。其效果取决于 border-color 的值。</div>
+    <div class="none">无边框</div>
+    <div class="hidden">隐藏边框</div>
+  </body>
+</html>

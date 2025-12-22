@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .margin {
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+      margin-top: 20px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>margin 属性 - 外边距</h1>
+  <p>margin 是盒子的外边距</p>
+
+  <dl>
+    <dt>margin 有四个方向，可以通过以下属性分别设置不同方向外边距</d>
+    <dd>margin-top:上外边距</dd>
+    <dd>margin-right:右外边距</dd>
+    <dd>margin-bottom:下外边距</dd>
+    <dd>margin-left:左外边距</dd>
+  </dl>
+
+  <div class="margin">我是外边框</div>
+  <div class="margin"></div>
+
+
+  <dl>
+    <dt>margin 属性，4 值不同写法</dt>
+    <dd>一个值: margin: 20px; 四个方向的外边距大小都是20px;</dd>
+    <dd>2 个值: margin: 20px 30px; 第一个值代表上下外边距20px，第二个值是左右外边距30px </dd>
+    <dd>3 个值: margin: 20px 10px 30px; 值1代表上外边距20px 值2代表左右外边距 10px 值3 代表下外边距30px</dd>
+    <dd>4 个值: margin: 10px 20px 30px 40px; padding:上 右 下 左 ; 四个方向值</dd>
+  </dl>
+
+
+  <p>margin 设置块级元素水平居中</p>
+  <p>将块级元素的margin属性的左右值同时设置为auto，就可以实现元素在水平方向居中显示。
+    <strong>margin: 20px auto; </strong>
+    <strong>margin: 10px auto 20px;</strong>
+  </p>
+
+  <p>
+    margin:auto 20px; 这样写，并不会垂直居中
+  </p>
+</body>
+
+</html>
