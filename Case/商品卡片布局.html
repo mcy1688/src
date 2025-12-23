@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* a链接去除样式 */
+      a {
+        text-decoration: none;
+        font: bold 12px/1.5em "微软雅黑";
+      }
+      .cark {
+        max-width: 220px;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+      .title {
+        overflow: hidden;
+        display: -webkit-box; /* 将元素设为弹性伸缩盒子模型 */
+        -webkit-box-orient: vertical; /* 设置子元素的排列方式 */
+        -webkit-line-clamp: 2; /* 限制显示的行数 */
+        line-clamp: 2; /* 标准属性（尚未被广泛支持） */
+
+        margin: 5px 0;
+      }
+      .tag_list span {
+        background-color: rgba(216, 119, 21, 0.1);
+        color: #d87715;
+        margin: 0 3px;
+        padding: 0 2px;
+        display: inline-flex;
+      }
+      .price {
+        font-family: JDZhengHT-Regular;
+        color: red;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 30px;
+        height: 30px;
+      }
+      .price .int {
+        font-size: 24px;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cark">
+      <a href="#">
+        <img src="../image/7c0472e16bf1e06a.jpg!q70.jpg" alt="悬挂" />
+        <span class="title">
+          固特（GUTE）衣柜顶装纵向挂衣杆u型衣通柜内窄浅竖向悬吊伸缩横杆挂衣架
+          U型衣杆底座套餐-银色 吊杆31-50cm
+        </span>
+        <div class="tag_list">
+          <span>安装便捷</span>
+          <span>操作便捷</span>
+        </div>
+      </a>
+      <div class="price">
+        <span>¥</span><span class="int">31</span
+        ><span>.00</span>
+      </div>
+    </div>
+  </body>
+</html>

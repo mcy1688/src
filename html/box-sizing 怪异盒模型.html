@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      dt {
+        font-weight: bold;
+      }
+
+      /*button的可视宽高 为 100px*/
+      button {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 20px solid red;
+      }
+      /*div的可视宽高为 100+10*2+20*2=160px*/
+      div {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 20px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>box-sizing 怪异盒模型</h1>
+    <p>在 CSS3 中新增了怪异盒子模型（IE 盒子模型）</p>
+
+    <h2>标准盒模型与怪异盒模型区别</h2>
+    <p>
+      标准盒模型和 怪异盒模型（也称：IE 盒模型）的区别在于设置 width 和 height
+      属性时，所对应的范围不同：
+    </p>
+
+    <dl>
+      <dt>标准盒模型的 width 和 height 属性的范围只包含了 content 内容区</dt>
+      <dt>
+        IE 盒模型（怪异盒模型）的 width 和 height 属性的范围包含了
+        border、padding 和 content
+      </dt>
+      <dd>width = border + padding + 内容的宽度</dd>
+      <dd>height = border + padding + 内容的高度</dd>
+      <dt>
+        在怪异盒模型下，设置 width 和 height
+        属性后，内容区宽和高是被自动计算得到的
+      </dt>
+      <dd>内容的宽度 =width - border - padding</dd>
+      <dd>内容的高度=height -border -padding</dd>
+      <dd>button 标签，是典型的怪异盒模型</dd>
+    </dl>
+
+    <button></button>
+    <hr />
+    <div></div>
+
+    <h2>我们通过 box-sizing 属性来切换标准盒子模型与怪异盒子模型</h2>
+    <p>box-sizing：content-box 是默认值，盒子以标准盒子模型特性来渲染</p>
+    <p>box-sizing: border-box 盒子以怪异盒子模型特性来渲染</p>
+
+    <h2>应用场景：</h2>
+    <p>
+      如果我们期望不管元素的边框、内边距大小如何变化，元素的可视宽高始终不变时，就可以给元素添加
+      box-sizing:border-box;属性，以怪异盒模型来渲染，这样元素的内容区大小会自动调整。
+    </p>
+    <p>怪异盒模型常应用在响应式开发、移动端开发中。</p>
+  </body>
+</html>

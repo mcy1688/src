@@ -11,12 +11,32 @@
         margin: 50px 0;
         background-color: red;
       }
+      /* 给其中一个元素添加inline-block */
+      .inline_block {
+        /* display: inline-block; */
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background: green;
+
+        margin-top: 20px;
+      }
+      .item {
+        width: 50px;
+        height: 50px;
+        background: blue;
+
+        /* 子元素的上外边距，此时父子元素的上边距发生塌陷（合并），最终上外边距的结果为 50px */
+        margin-top: 50px;
+      }
     </style>
   </head>
   <body>
     <h1>margin 的塌陷</h1>
     <p>margin 塌陷也叫：外间距重叠 或 外边距合并 或 外边距穿透</p>
-    <p>兄弟元素之间 ，垂直方向：上下外边距出现塌陷</p>
+    <h2>兄弟元素之间 ，垂直方向：上下外边距出现塌陷</h2>
 
     <p>
       垂直方向的 margin
@@ -25,11 +45,27 @@
     <p>小的 margin 会塌陷到大的 margin 中，从而 margin 不叠加，只以大值为准</p>
     <p>以下两盒子之间间距为 100px ，垂直方向的 margin 不叠加，以大数为准</p>
 
-    <div class="margin">下面是50px</div>
+    <div class="margin inline_block">下面是50px</div>
     <div class="margin">上面是50px</div>
     <h2>解决办法:</h2>
     <p>方法一：任何一个元素加上 display:inline-block;</p>
     <p>方法二：把外边距只加在其中一个元素上</p>
     <p>方法三：选择把任意一个元素的外边距换成对应的 padding</p>
+
+    <h2>父子元素之间，垂直方向：上外边距塌陷</h2>
+    <p>
+      当一个元素包含在另一个元素中时，如果父元素没有设置内边距或边框把外边距分隔开，它们的上外边距也会发生塌陷（合并）
+    </p>
+
+    <div class="box"><div class="item"></div></div>
+
+    <h2>解决办法:</h2>
+    <p>方法一：给父元素加上 overflow: hidden;</p>
+    <p>方法二：给父元素添加透明的**border** 边框</p>
+    <p>
+      方法三：将子元素的上外边距去掉，
+      改成给父元素添加上内边距来实现两者的上间距。
+    </p>
+    <p>还有更多方法，等我们后面学完浮动，定位之后再来讲解。</p>
   </body>
 </html>
