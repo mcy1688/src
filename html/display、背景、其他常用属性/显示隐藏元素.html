@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .none {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        display: none;
+      }
+      .show {
+        display: block;
+      }
+      .hidden {
+        visibility: hidden;
+      }
+      .visible {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>隐藏元素方法</h1>
+    <p>display:none;和visibility:hidden;</p>
+
+    <p>
+      display:none;可以将元素隐藏，子孙元素全部隐藏不可见。并且只要父元素隐藏，子孙没有任何办法可见。
+      元素隐藏后不会占空间。就好比页面当中就没有加过这个元素一样。
+    </p>
+    <p>
+      visibility:hidden;将元素隐藏，子孙元素全部不可见，但是给子孙加上
+      visibility: visible;时，子孙可见。
+      隐藏后仍占其位置，会留下空白的一块区域。基本不用。
+    </p>
+
+    <div class="none">
+      <div class="show">不显示</div>
+    </div>
+
+    <div class="hidden">
+      <div class="visible">显示</div>
+    </div>
+  </body>
+</html>

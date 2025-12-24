@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .number {
+        width: 200px;
+        height: 200px;
+
+        border: 1px solid red;
+        background-image: url(../../image/down.png);
+        background-repeat: no-repeat;
+        /* 数值 单个值 x,y*/
+        background-position: 20px;
+        padding-top: 20px;
+      }
+      .Percentage {
+        width: 200px;
+        height: 200px;
+
+        border: 1px solid red;
+        background-image: url(../../image/down.png);
+        background-repeat: no-repeat;
+        /* 百分比 */
+        background-position: 25%;
+      }
+      .Keywords {
+        width: 400px;
+        height: 400px;
+
+        border: 1px solid red;
+        background-image: url(../../image/down.png);
+        background-repeat: no-repeat;
+        /* 百分比 */
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>background-position 背景图片位置</h1>
+
+    <dt>background-position 背景图片位置</dt>
+    <dd>用来控制背景图片在盒子中显示的开始位置</dd>
+    <dd>背景图片位置默认是从 padding 区开始计算</dd>
+    <dd>
+      <div class="number"></div>
+    </dd>
+
+    <dt>百分比表达法:百分比写法 x% y% ，则最后的偏移量是</dt>
+    <dd>左偏移量 =（容器 width + 左右 padding - 背景图 width）* 百分比</dd>
+    <dd>上偏移量 =（容器 height +上下 padding - 背景图 height）* 百分比</dd>
+    <dd>background-position: x% y%;</dd>
+    <dd>
+      当背景图片尺寸 ≥ 容器尺寸时，无论怎么设置
+      background-position，看起来都不会有变化，因为图片已经填满了整个容器。
+    </dd>
+    <dd>
+      <div class="Percentage"></div>
+    </dd>
+
+    <dt>关键词表达法</dt>
+    <dd>
+      可以用 （top、bottom）、（center）、（left、right）
+      三组中的任意两个组中的一个值组合来确定位置
+    </dd>
+    <dd>也可以用以上三组中的任意一个单个词来确定位置</dd>
+    <dd>
+      <div class="Keywords"></div>
+    </dd>
+
+    <dt></dt>
+  </body>
+</html>

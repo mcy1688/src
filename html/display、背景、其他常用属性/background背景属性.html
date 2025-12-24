@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      .color16 {
+        width: 100px;
+        height: 100px;
+
+        padding: 10px;
+        background-color: red;
+      }
+      .image_16 {
+        width: 100px;
+        height: 100px;
+
+        padding: 10px;
+        background-image: url("../../image/7c0472e16bf1e06a.jpg!q70.jpg");
+      }
+      .repeat {
+        width: 200px;
+        height: 200px;
+
+        background-image: url("../../image/down.png");
+        background-repeat: no-repeat;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>background 背景属性</h1>
+    <p>background 背景属性（颜色、图片、重复、位置、符合属性）</p>
+    <p>CSS 精灵图，背景固定，背景尺寸</p>
+    <p>线性渐变，径向渐变，浏览器私有前缀等</p>
+
+    <dl>
+      <dt>background-color 背景颜色</dt>
+      <dd>background-color 表示背景颜色</dd>
+      <dd>背景颜色可以用 十六进制、rgb()、rgba() 或 英文单词表示</dd>
+      <dd>padding 区域是有背景颜色的</dd>
+      <dd><div class="color16"></div></dd>
+
+      <dt>background-image 图片</dt>
+      <dd>background-image属性用来设置背景图片</dd>
+      <dd>图片路径要写在 url()圆括号中，可以是相对路径，也可以是绝对路径</dd>
+      <dd>地址相对路径是从 css 样式的位置出发</dd>
+      <dd><div class="image_16"></div></dd>
+
+      <dt>background-repeat 重复</dt>
+      <dd>
+        用来设置背景图片的重复模式，在默认情况下，背景是会在 x 和 y
+        轴方向进行平铺。
+      </dd>
+      <dd>repeat; x，y 均平铺 （默认）</dd>
+      <dd>repeat-x; x 平铺</dd>
+      <dd>repeat-y; y 平铺</dd>
+      <dd>no-repeat; 不平铺</dd>
+      <dd><div class="repeat"></div></dd>
+
+      <dt>background-size 背景尺寸</dt>
+      <dd>
+        <table>
+          <thead>
+            <tr>
+              <th>属性值</th>
+              <th>说明</th>
+              <th>实例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>x y</td>
+              <td>x y 数值，分别表示背景图片宽高大小</td>
+              <td>background-size: 100px 200px;</td>
+            </tr>
+            <tr>
+              <td>x% y%</td>
+              <td>百分比是相对于盒子的宽高而言，</td>
+              <td>background-size: 50% 20%;</td>
+            </tr>
+            <tr>
+              <td>x auto</td>
+              <td>
+                auto
+                是相对于第一个值宽来自动缩放第一个值可以是数值，也可以是百分形式
+              </td>
+              <td>background-size: 100px auto;</td>
+            </tr>
+            <tr>
+              <td>contain</td>
+              <td>背景图片等比缩放到正好全部容纳到盒子里</td>
+              <td>background-size: contain;</td>
+            </tr>
+            <tr>
+              <td>cover</td>
+              <td>
+                背景图片等比缩放到正好撑满整个盒子，所以部分有可能会被裁剪掉
+              </td>
+              <td>background-size: cover;</td>
+            </tr>
+          </tbody>
+        </table>
+      </dd>
+      <dd>background-size 属性的默认值为 auto</dd>
+    </dl>
+  </body>
+</html>

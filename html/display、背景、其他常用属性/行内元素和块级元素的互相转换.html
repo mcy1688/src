@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .inline-block {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+
+        display: inline-block;
+      }
+      .block {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+
+        display: block;
+      }
+
+      .inline{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>行内元素和块级元素的互相转换</h1>
+    <p>
+      我们只需要给对应的元素添加对应 display
+      属性值，就可以把元素转换为对应的元素类型。
+    </p>
+
+    <ul>
+      <li>使用 display: block; 即可将元素转换为 块级元素</li>
+      <li>
+        使用display: inline; 即可将元素转换为
+        行内元素。不过将元素转换为行内元素的应用不多见
+      </li>
+      <li>使用 display: inline-block; 即可将元素转换为 行内块</li>
+    </ul>
+
+    <div class="inline-block"></div>
+    <div class="inline-block"></div>
+    <h2>两个div在一行</h2>
+
+    <span class="block">块级元素</span>
+    <span class="block">块级元素</span>
+    <h2>两个span各占一行</h2>
+
+    <h2 class="inline">我是h3内联元素,不支持设置宽高</span>
+  </body>
+</html>

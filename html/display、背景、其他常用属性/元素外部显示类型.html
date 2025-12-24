@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>元素外部显示类型</h1>
+    <p>display 通过以下属性值来指定元素的显示类型</p>
+
+    <p>block 块级,inline-block 行内块inline 行内(内联)</p>
+
+    <p>
+      元素显示类型分为：block 块级 和 inline 内联 等 inline
+      内联元素又分为：inline 内联元素 和 inline-block 行内块元素
+    </p>
+
+    <h2>block 块级元素 p,div,ul,ol,li,h1~h6,dl</h2>
+    <dl>
+      <dt>块级元素的特点：</dt>
+      <dd>独占一行</dd>
+      <dd>可以设置 width、height 属性。</dd>
+      <dd>在不设置宽情况下，宽默认为父元素内容区宽。</dd>
+      <dd>块级元素里可以放任意类型元素。</dd>
+    </dl>
+    <h3>
+      文字类元素标签内不能放其它块元素，比如：p 标签里不能放 p 和 div
+      标签。h1-h6 标签里不能放 p，div 元素
+    </h3>
+
+    <h2>inline-block 行内块元素 img,表单类元素,video,audio,</h2>
+    <p>以上元素本质上叫 可替换元素，归类归到 inline·内联（行内）元素</p>
+
+    <dl>
+      <dt>行内块元素的特点：</dt>
+      <dd>相邻的行内块（或行内）元素会在一行显示，放不下会换行。</dd>
+      <dd>相邻的行内块元素之间会有空白间隙（后面案例中来解答这个问题）。</dd>
+      <dd>元素默认宽为它本身内容宽</dd>
+      <dd>可设置 width、height 属性</dd>
+    </dl>
+
+    <h2>inline 内联（行内）元素a、strong、span、i、del 等</h2>
+    <dl>
+      <dt>行内元素特点：</dt>
+      <dd>相邻的行内元素会在一行显示，放不下时会换行显示</dd>
+      <dd>设置 width、height 属性是无效的。其宽高随其内容大小而撑开。</dd>
+      <dd>行内元素里只能放文本或其它行内元素</dd>
+    </dl>
+
+    <h3>
+      a标签中不能再放a标签 但 a 标签中可以放块级元素
+      实际开发中，在某些情况下会把 a 标签转换为块级元素
+    </h3>
+  </body>
+</html>
