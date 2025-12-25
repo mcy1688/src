@@ -33,6 +33,48 @@
         background-repeat: no-repeat;
         border: 1px solid red;
       }
+
+      .size {
+        width: 200px;
+        height: 200px;
+
+        background-image: url("../../image/7c0472e16bf1e06a.jpg!q70.jpg");
+        background-repeat: no-repeat;
+        border: 1px solid red;
+        /* background-size: 100px 100px; */
+        background-size: contain;
+        /* background-size: cover; */
+        /* background-size: 100px auto; */
+        /* background-size: 50% 50%; */
+      }
+      .clip {
+        width: 200px;
+        height: 200px;
+
+        background-image: url("../../image/7c0472e16bf1e06a.jpg!q70.jpg");
+        background-repeat: no-repeat;
+        border: 50px solid rgba(255, 0, 0, 0.5);
+        background-size: 400px 400px;
+
+        padding: 10px;
+        margin: 10px;
+        background-clip: padding-box;
+        background-origin: border-box; /* 默认值：图片从内边距开始定位 */
+      }
+      .origin {
+        width: 200px;
+        height: 200px;
+
+        background-image: url("../../image/7c0472e16bf1e06a.jpg!q70.jpg");
+        background-repeat: no-repeat;
+        border: 50px solid rgba(255, 0, 0, 0.5);
+        background-size: 400px 400px;
+
+        padding: 10px;
+        margin: 10px;
+        background-clip: padding-box;
+        background-origin: border-box; /* 默认值：图片从pading-boxs内边距开始定位 */
+      }
     </style>
   </head>
   <body>
@@ -110,6 +152,40 @@
         </table>
       </dd>
       <dd>background-size 属性的默认值为 auto</dd>
+      <dd><div class="size"></div></dd>
+
+      <dt>background-attachment 背景固定</dt>
+      <dd>
+        scroll:默认值。背景图片随着页面的滚动而滚动，相对于元素本身固定，而不是随着它的内容滚动
+      </dd>
+      <dd>
+        fixed:此关键属性值表示背景相对于视口固定。即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动
+      </dd>
+      <dd>
+        local:背景相对于元素的内容固定。如果一个元素拥有滚动机制，背景将会随着元素的内容滚动，同时背景图图片随着页面的滚动而滚动
+      </dd>
+      <dd>
+        <a href="../../Case/attachment属性练习.html">attachment效果练习跳转</a>
+      </dd>
+
+      <dt>background-clip</dt>
+      <dd>
+        background-clip
+        设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面。
+      </dd>
+
+      <dd>border-box默认值。背景绘制在边框方框内。</dd>
+      <dd>padding-box背景绘制在内边距方框内。</dd>
+      <dd>content-box背景绘制在内容方框内。</dd>
+      <dd>text背景被裁剪成文字的前景色。</dd>
+      <dd><div class="clip"></div></dd>
+
+      <dt>background-origin</dt>
+      <dd>背景图片的定位区域</dd>
+      <dd>padding-box默认值。背景图片的摆放以 padding 区域为参考</dd>
+      <dd>border-box背景图片的摆放以 border 区域为参考</dd>
+      <dd>content-box背景图片的摆放以 content 区域为参考</dd>
+      <dd><div class="origin"></div></dd>
     </dl>
   </body>
 </html>

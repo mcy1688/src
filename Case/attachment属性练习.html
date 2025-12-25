@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+      .attachment {
+        width: 400px;
+        height: 400px;
+
+        background-image: url("../image/7c0472e16bf1e06a.jpg!q70.jpg");
+        background-repeat: no-repeat;
+        border: 1px solid red;
+        background-attachment: scroll;
+        /* background-attachment: fixed;
+        background-attachment: local; */
+        /* Y轴内容溢出显示滚动条 */
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="attachment">
+      <div style="height: 500px"></div>
+    </div>
+  </body>
+</html>
