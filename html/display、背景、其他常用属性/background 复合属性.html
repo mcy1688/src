@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .background {
+        width: 300px;
+        height: 300px;
+        border: 20px solid pink;
+        padding: 20px;
+        /* background 复合写法中省略的值，会覆盖前面背景小属性中定义的值 */
+        background: green url("../../image/7c0472e16bf1e06a.jpg!q70.jpg")
+          no-repeat center/200px 200px content-box content-box;
+        /* color,image,repeat,position,size,cilp,origin */
+        background: red url("../../image/7c0472e16bf1e06a.jpg!q70.jpg")
+          center/200px 200px;
+      }
+      .background_number {
+        width: 300px;
+        height: 300px;
+        border: 20px solid pink;
+        padding: 20px;
+
+        /* 背景属性多值写法 */
+        background-image: url("../../image/down.png"),
+          url("../../image/7c0472e16bf1e06a.jpg!q70.jpg");
+        background-size: 50px, 100px;
+        background-repeat: no-repeat, no-repeat;
+        background-position: 0px 0px, right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>background 复合属性</h1>
+    <p>常用的背景相关小属性，可以合写到一条 background 属性中</p>
+    <p>
+      background 是的
+      background-color、background-image、background-repeat、background-position、background-size、background-origin
+      background-clip、属性的简写
+    </p>
+    <p>工作中用的非常多</p>
+    <h2>
+      background: 背景颜色 背景图 背景位置/背景大小 背景重复度 背景固定
+      背景定位区域 背景延伸区域;
+    </h2>
+    <div class="background"></div>
+
+    <h2>背景属性多值写法</h2>
+    <p>
+      background-image,bakground-size,bakground-position,background-repeat后面都可以设置多个值，每组值之间用逗号分隔开来
+    </p>
+    <p>
+      每个属性之间用逗号分隔的值，都是按顺序一一对应的，如果对应后面的值没有写，则以当前属性设置的第一组值为默认值显示。
+    </p>
+    <div class="background_number"></div>
+  </body>
+</html>

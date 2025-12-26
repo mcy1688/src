@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .xd {
+        width: 47px;
+        height: 54px;
+        background: url("../image/雪碧图xhdpi.png") no-repeat;
+        background-position: -27px -22px;
+      }
+      .xg {
+        width: 52px;
+        height: 57px;
+        background: url(../image/雪碧图xhdpi.png) no-repeat;
+        background-position: -127px -22px;
+      }
+      .hg {
+        width: 52px;
+        height: 57px;
+        background: url(../image/雪碧图xhdpi.png) no-repeat;
+        background-position: -225px -22px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>css精灵图</h1>
+    <p>将多个 小图标 合并制作到一张图片上</p>
+    <p>使用 background-position属性单独显示其中一个</p>
+    <p>这样的技术叫做 CSS 精灵技术 ，也叫作CSS 雪碧图</p>
+    <p>
+      CSS 精灵可以减少 HTTP
+      请求数，加快网页显示速度，但缺点也很明显：不方便测量，后期改动麻烦
+    </p>
+
+    <div class="xd"></div>
+    <div class="xg"></div>
+    <div class="hg"></div>
+  </body>
+</html>
