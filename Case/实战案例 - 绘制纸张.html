@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 去掉默认 */
+      ul,
+      li,
+      p {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      /* 标题 */
+      h2 {
+        text-align: center;
+      }
+      /* 文字 */
+      p {
+        border-bottom: 2px solid #ddd;
+        line-height: 40px;
+      }
+      /* 纸张 */
+      .box {
+        width: 500px;
+        height: 650px;
+        padding: 0 20px;
+        background: linear-gradient(
+          to bottom,
+          rgb(252, 231, 235),
+          #fff,
+          rgb(252, 231, 235)
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <h1>绘制纸张</h1>
+    <div class="box">
+      <ul>
+        <li><h2>径向渐变实现纸张效果</h2></li>
+        <li><p>1.创建一个长方形</p></li>
+        <li><p>2.绘制从上向下的渐变色背景</p></li>
+        <li><p>3.绘制纸张的横线</p></li>
+        <li><p>4.设置横线与纸张左右两边有一定的间距</p></li>
+        <li><p>5.添加h2标题,制作内容标题,并让标题水平居中</p></li>
+        <li><p>6.添加p标签,添加内容</p></li>
+        <li><p>让文字相对行居中</p></li>
+      </ul>
+    </div>
+  </body>
+</html>

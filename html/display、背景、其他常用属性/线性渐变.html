@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+      .gradient_Keyword {
+        /* 默认从上到下渐变 to bottom*/
+        background: linear-gradient(to bottom, red, green);
+      }
+      .gradient_Degree {
+        /* 默认从上到下渐变 180deg*/
+        background: linear-gradient(45deg, red, green);
+      }
+      .gradient_color {
+        /* 设置颜色渐变起始  位置 */
+        background: linear-gradient(to bottom, red 0%, green 20%);
+      }
+      .gradient_color_center {
+        /* 设置颜色渐变的自定义转换中点 ,这里绿色的20%被中转覆盖,绿色必须大于50%*/
+        background: linear-gradient(to bottom, red 0%, 15%, green 20%);
+      }
+      .gradient_color_number {
+        width: 500px;
+        /* 设置颜色渐变的自定义转换中点 , 、设置多位置色标,第一个数起始位置,第二个是终止位置*/
+        background: linear-gradient(
+          to right,
+          red 0% 20%,
+          orange 20% 40%,
+          yellow 40% 60%,
+          green 60% 80%,
+          blue 80%
+        );
+      }
+      .center {
+        background: linear-gradient(to right, red 0% 20%, 70%, blue 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>线性渐变</h1>
+    <p>
+      CSS 属性 background-image 可以用
+      linear-gradient()函数，用于创建线性渐变背景
+    </p>
+    <p>
+      语法: background-image: linear-gradient(direction, color-stop1,
+      color-stop2, ...);
+    </p>
+    <p>未指定渐变方向时,则默认从上到下渐变相当于设置了角度值 180deg</p>
+    <div class="box gradient_Keyword"></div>
+
+    <dl>
+      <dt>关键字指定渐变的方向</dt>
+      <dd>top从下到上渐变</dd>
+      <dd>bottom从上到下渐变</dd>
+      <dd>left从右到左渐变</dd>
+      <dd>right从左到右渐变</dd>
+    </dl>
+    <h2>用度数指定渐变方向</h2>
+    <p>渲染的效果是，颜色从下往上渐变，然后旋转一定的角度。</p>
+    <p>角度为正值，则顺时针旋转,角度为负值，则逆时针旋转</p>
+    <div class="box gradient_Degree"></div>
+
+    <h2>设置颜色（色标）的起始位置</h2>
+    <p>
+      在颜色的后面紧跟着一个 空格 和 值（数值或百分值都可以）来指定颜色的
+      <strong>起始位置</strong>
+    </p>
+    <div class="box gradient_color"></div>
+    <p>未设置 0% 的起始色 与 100%的终止色</p>
+    <p>默认情况下，如果未设置 0% 的起始色，则起始色为声明的第一个颜色。</p>
+    <p>
+      不管最后一种颜色出现位置有无设置，或设置值为多少，最后一个颜色都将持续到
+      100%的位置 。
+    </p>
+    <p>
+      默认情况下，从一个颜色的平滑的过渡到另一个颜色，两颜色之间的中点是两个颜色转换的中点（过渡中点）
+    </p>
+    <p>
+      你可以将中点移动到这两个颜色之间的任意位置，方法是在两个颜色之间添加未标记颜色的
+      %分值，以指示颜色的中转位置
+    </p>
+    <div class="box gradient_color_center"></div>
+    <p>可以在一个颜色后面出现多个色标值。</p>
+    <div class="box gradient_color_number"></div>
+
+    <h2>区分多位置色标与转换中点</h2>
+    <div class="box center"></div>
+    <div class="box number"></div>
+  </body>
+</html>
