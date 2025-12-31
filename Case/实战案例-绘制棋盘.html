@@ -12,11 +12,11 @@
         border: 3px solid #654321;
         border-radius: 5px;
 
-        /* 暂时无法用复合写法搞出来 */
-        background: linear-gradient(to bottom, transparent 39px, #654321 39px),
-          linear-gradient(to right, transparent 39px, #654321 39px);
-        background-color: #deb887;
-        background-size: auto 40px, 40px auto;
+        /* 复合属性写法 记住position简写0,等同于 position:0 center,没事不要用符合属性 */
+        background: linear-gradient(to bottom, transparent 39px, #654321 39px) 0
+            0 / auto 40px,
+          linear-gradient(to right, transparent 39px, #654321 39px) 0 0 / 40px
+            auto #deb887;
       }
     </style>
   </head>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+      }
+      .box1 {
+        /* 径向渐变 */
+        background: radial-gradient(red, yellow, blue);
+      }
+      .box2 {
+        /* 设置起始颜色 */
+        background: radial-gradient(red 10%, yellow 20%, blue);
+      }
+      .box3 {
+        /* 设置过渡中点 */
+        background: radial-gradient(red 30%, 30%, yellow 50% 80%, blue);
+      }
+      .box4 {
+        /* 设置多位置色标 */
+        background: radial-gradient(red 10% 30%, yellow 30% 50%, blue 50%);
+      }
+      .box5 {
+        /* 设置渐变形状 */
+        background: radial-gradient(circle, red, yellow, blue);
+      }
+      .box6 {
+        /* 指定径向渐变的位置 */
+        background: radial-gradient(at top right, red, yellow, blue);
+      }
+      .farthest-corner {
+        background: radial-gradient(
+          farthest-corner at 50px 20px,
+          red,
+          yellow,
+          blue
+        );
+      }
+      .closest-side {
+        background: radial-gradient(
+          closest-side at 50px 20px,
+          red,
+          yellow,
+          blue
+        );
+      }
+      .closest-corner {
+        background: radial-gradient(
+          closest-corner at 50px 20px,
+          red,
+          yellow,
+          blue
+        );
+      }
+      .farthest-side {
+        background: radial-gradient(
+          farthest-side at 50px 20px,
+          red,
+          yellow,
+          blue
+        );
+      }
+      .box7 {
+        /* 指定背景颜色大小 最后一个颜色会始终填满整个容器*/
+        background: radial-gradient(circle 50px at center, red, yellow, blue);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>径向渐变</h1>
+    <p>径向渐变是指由中心向四周的渐变</p>
+    <p>
+      径向渐变 (Radial gradients) 是由
+      渐变形状，渐变大小、*中心点、*两个或多个色值结束点（color
+      stops）**定义而成。
+    </p>
+    <div class="box box1"></div>
+    <p>设置色标（颜色）的起始位置</p>
+    <div class="box box2"></div>
+    <p>自定义转换中点（过渡中点）</p>
+    <div class="box box3"></div>
+    <p>设置多位置色标(颜色)</p>
+    <div class="box box4"></div>
+    <p>设置径向渐变的形状 shape</p>
+    <div class="box box5"></div>
+    <p>指定径向渐变中心位置 position</p>
+    <p>
+      设置渐变中心位置与设置背景图位置相似，属性值可以采用固定值、百分比值、关键词
+      三种写法。
+    </p>
+    <p>
+      百分比值相对于背景图 background-size
+      大小而言。不过如果渐变图形是圆时，百分比不会生效；只有渐变是椭圆时才会生效，并且
+      x y 半径都要指定。
+    </p>
+    <div class="box box6"></div>
+    <p>指定不同尺寸的大小 size</p>
+    <p>
+      farthest-corner (默认) :
+      渐变的边缘形状与容器距离渐变中心点最远的一个角相交。
+    </p>
+    <div class="box farthest-corner"></div>
+    <p>
+      closest-side (圆形)渐变的边缘形状与容器距离渐变中心点最近的一边相切
+      (椭圆)距离渐变中心点最近的垂直和水平边相切。
+    </p>
+    <div class="box closest-side"></div>
+    <p>
+      closest-corner渐变的边缘形状与容器距离渐变中心点最近的一个角相交(水平与垂直边相交)。
+    </p>
+    <div class="box closest-corner"></div>
+    <p>
+      farthest-side与 closest-side
+      相反，边缘形状与容器距离渐变中心点最远的一边相切（或最远的垂直和水平边）。
+    </p>
+    <div class="box farthest-side"></div>
+    <p>指定渐变的半径</p>
+    <div class="box box7"></div>
+  </body>
+</html>

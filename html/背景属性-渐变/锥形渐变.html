@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+      }
+      .box1 {
+        /* 简单的渐变 */
+        background: conic-gradient(red, yellow, blue);
+      }
+      .box2 {
+        /* 旋转角度 */
+        background: conic-gradient(from 45deg, red, yellow, blue);
+      }
+      .box3 {
+        /* 中心点 */
+        background: conic-gradient(
+          from 180deg at top center,
+          red,
+          yellow,
+          blue
+        );
+      }
+      .box4 {
+        /* 色标位置 */
+        background: conic-gradient(red 10%, yellow 10% 40%, blue 40%);
+      }
+      .box5 {
+        /* 色标过度 */
+        background: conic-gradient(red 10%, yellow 10%, 75%, blue);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>锥形渐变</h1>
+    <p>
+      CSS 属性 background-image 可以用 conic-gradient() 函数创建圆锥渐变背景图
+    </p>
+    <p>圆锥渐变的渐变颜色围绕一个中心点旋转进行过渡。</p>
+    <div class="box box1"></div>
+
+    <p>
+      angle定义顺时针方向的渐变旋转角度 值写法：from 角度值 如 from 45deg
+      默认值：from 0deg
+    </p>
+    <p>
+      position定义渐变的中心位置 使用与 background-position (opens new
+      window)属性相同的值，定义渐变的中心。如果省略，默认值是
+      center，表示渐变是居中的。
+    </p>
+    <p>
+      start-color, ... , end-color定义渐变的颜色（色标）
+      颜色值，然后后面可以根一个或两个可选的色标位置。
+      两个颜色之间可以定义插值（数值），这个值决定了两个颜色的过渡中点
+    </p>
+
+    <h2>设置渐变旋转角度</h2>
+    <div class="box box2"></div>
+
+    <h2>设置渐变中心位置</h2>
+    <div class="box box3"></div>
+    <h2>设置颜色（色标）的位置（起始位置）</h2>
+    <p>
+      在颜色的后面紧跟着一个空格和色标值（度数 或
+      百分值都可以）来指定颜色的起始位置
+    </p>
+    <p>百分比值相对的是 360deg 而言。比如 50% ，则相当于 360 * 50%=180deg</p>
+    <p>
+      默认情况下，如果未设置 0% 的起始色，则起始色为声明的第一个颜色。
+      不管最后一种颜色出现位置有无设置，或设置值为多少，最后一个颜色都将持续到
+      100% 的位置 。
+    </p>
+    <div class="box box4"></div>
+    <h2>自定义转换中点（过渡中点）</h2>
+    <div class="box box5"></div>
+  </body>
+</html>

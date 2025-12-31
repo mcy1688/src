@@ -19,20 +19,22 @@
       }
       /* 文字 */
       p {
-        border-bottom: 2px solid #ddd;
-        line-height: 40px;
+        /* border-bottom: 2px solid #ddd; */
+        line-height: 45px;
       }
       /* 纸张 */
       .box {
         width: 500px;
         height: 650px;
-        padding: 0 20px;
-        background: linear-gradient(
-          to bottom,
-          rgb(252, 231, 235),
-          #fff,
-          rgb(252, 231, 235)
-        );
+        padding: 0 30px;
+        background: linear-gradient(to bottom, transparent 45px, #ddd 45px) 0 0 /
+            auto 46px content-box content-box,
+          linear-gradient(
+            to bottom,
+            rgb(252, 231, 235),
+            #fff,
+            rgb(252, 231, 235)
+          );
       }
     </style>
   </head>
