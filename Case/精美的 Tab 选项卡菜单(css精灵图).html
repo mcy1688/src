@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+  
+      .tab {
+        border-radius: 50px;
+        text-align: center;
+        font-size: 0;
+        background-color: #eeeeee;
+      }
+      .tab span {
+        display: inline-block;
+        font-size: 12px;
+        border-radius: 50px;
+        padding: 10px 30px;
+        line-height: 12px;
+        vertical-align: middle;
+      }
+      .tab span i {
+        display: inline-block;
+        width: 12px;
+        height: 11px;
+        background-image: url("../image/icon.png");
+        background-repeat: no-repeat;
+        background-size: 65px 26px;
+        margin-right: 5px;
+      }
+
+      .tab span .icon1 {
+        background-position: 0px -13px;
+      }
+      .tab span .icon2 {
+        background-position: -13px 0px;
+      }
+      .tab span .icon3 {
+        background-position: -26.6px -1px;
+      }
+      .tab span .icon4 {
+        background-position: -40px 0px;
+      }
+      .tab span .icon5 {
+        background-position: -52px 0px;
+      }
+      .tab .active {
+        color: #fff;
+        background-color: #fe94a9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="tab">
+        <span class="active"><i class="icon icon1"></i>备孕期间</span>
+        <span><i class="icon icon2"></i>怀孕</span>
+        <span><i class="icon icon3"></i>1-2岁</span>
+        <span><i class="icon icon4"></i>2-3岁</span>
+        <span><i class="icon icon5"></i>3-4岁</span>
+      </div>
+    </div>
+  </body>
+</html>

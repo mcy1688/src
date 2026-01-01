@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background: red;
+      }
+      .box1 {
+        /* cursor: default; */
+        cursor: url("../../image/cursors.ico"), default;
+      }
+      .box2 {
+        outline: 13px solid blue;
+      }
+      .box3 {
+        overflow: hidden;
+      }
+      .box4 span {
+        line-height: 20px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>其他属性</h1>
+    <h2>cursor 鼠标样式</h2>
+    <p>设置光标的类型，在鼠标指针悬停在元素上时显示相应样式</p>
+    <ul>
+      <li>
+        url:需使用的自定义光标的
+        URL。注释：请在此列表的末端始终定义一种普通的光标，以防没有由 URL
+        定义的可用光标。
+      </li>
+      <li>default:默认光标（通常是一个箭头</li>
+      <li>auto:默认。浏览器设置的光标。</li>
+      <li>crosshair:光标呈现为十字线。</li>
+      <li>pointer:光标呈现为指示链接的指针（一只手）</li>
+      <li>move:此光标指示某对象可被移动</li>
+      <li>e-resize:此光标指示矩形框的边缘可被向右（东）移动。</li>
+      <li>ne-resize:此光标指示矩形框的边缘可被向上及向右移动（北/东）。</li>
+      <li>nw-resize:此光标指示矩形框的边缘可被向上及向左移动（北/西）。</li>
+      <li>n-resize:此光标指示矩形框的边缘可被向上（北）移动。</li>
+      <li>se-resize:此光标指示矩形框的边缘可被向下及向右移动（南/东）。</li>
+      <li>sw-resize:此光标指示矩形框的边缘可被向下及向左移动（南/西）。</li>
+      <li>s-resize:此光标指示矩形框的边缘可被向下移动（南）。</li>
+      <li>w-resize:此光标指示矩形框的边缘可被向左移动（西）。</li>
+      <li>text:此光标指示文本。</li>
+      <li>wait:此光标指示程序正忙（通常是一只表或沙漏）。</li>
+      <li>help:此光标指示可用的帮助（通常是一个问号或一个气球）。</li>
+    </ul>
+    <p>关于url属性注意</p>
+    <p>图片地址，在实际开发中一般为绝对路径</p>
+    <p>图片大小最好是 32*32 的大小（各浏览器支持大小不一，但 32 都 ok）</p>
+    <p>
+      图片格式，不同浏览器格式不一，可以是 png、svg、ico、cur，一般以 ico 和 cur
+      为主
+    </p>
+    <div class="box box1"></div>
+
+    <h2>outline 外轮廓</h2>
+    <p>这个属性用于设置元素周围的轮廓 ，其用法和 border 属性一样</p>
+    <p>
+      outline 的小属性 outline-width 边框宽 outline-style 边框风格 outline-color
+      边框颜色
+    </p>
+    <p>
+      border 与 outline 的区别 outline ：不占据空间，绘制于元素内容周围的轮廓
+      ，不参于盒子模型的占位计算，不会因为添加这个属性，而造成盒子占位空间变化。
+      outline 没有办法单独控制某一边效果，也就是没有
+      outline-left、outline-top、outline-right、outline-bottom 属性;
+      border：参于盒子模型计算，会因为边框值的变化，造成盒子占位空间变化。
+    </p>
+    我在轮廓里面
+    <div class="box box2"></div>
+    <p>
+      应用实例: 表单元素为了增中其可访问性（聚焦提示），都有默认的 outline 值。
+    </p>
+    <p>将表单元素的outline值设为 0 或 none ，可以去掉表单元素的轮廓效果</p>
+    <h2>overflow 超出部分处理</h2>
+    <p>overflow 属性规定当内容溢出元素框时该 做什么。</p>
+    <!-- 值 -->
+    <p>visible:默认值。内容溢出，会呈现在元素框之外。</p>
+    <p>hidden:内容溢出，则溢出内容是不可见的。</p>
+    <p>scroll:不管内容是否溢出，都会显示滚动条。</p>
+    <p>
+      auto:内容溢出，则显示滚动条以便查看其余的内容。如果不溢出，则不显示滚动条
+    </p>
+    <p>inherit:规定应该从父元素继承 overflow 属性的值。</p>
+    <div class="box box3">
+      内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+      内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+      内容内容内容内容内容内容内容内容内容内容内容内容
+    </div>
+
+    <p>overflow-x 和 overfow-y</p>
+    <p>
+      指定行内元素 、行内块级元素 、表格单元格元素 的垂直对齐方式
+      对块级元素是无效的 overflow-x 水平方溢出设置 overflow-y 垂直方向溢出设置
+    </p>
+    <h2>vertical-align 属性</h2>
+    <p>
+      <strong
+        >指定行内元素 、行内块级元素 、表格单元格元素 的垂直对齐方式
+        对块级元素是无效的</strong
+      >
+    </p>
+    <ul>
+      <li>baseline:使元素的基线与父元素的 基线对齐</li>
+      <li>sub:使元素的基线与父元素的 下标基线对齐</li>
+      <li>super:使元素的基线与父元素的 上标基线对齐</li>
+      <li>text-top:使元素的顶部与父元素的字体顶部对齐</li>
+      <li>text-bottom:使元素的底部与父元素的字体底部对齐</li>
+      <li>
+        middle:使元素的中部与父元素的基线加上父元素 x-height(x 高度) 的一半对齐
+      </li>
+      <li>
+        数值(10px)使元素的基线对齐到父元素的基线 之上的给定长度 可以是负数
+      </li>
+      <li>
+        百分比
+        %:使元素的基线对齐到父元素的基线之上的给定百分比，该百分比是line-height
+        (opens new window)属性的百分比 可以是负数
+      </li>
+      <li>top:使元素及其后代元素的顶部与整行的顶部对齐</li>
+      <li>bottom:使元素及其后代元素的底部与整行的底部对齐</li>
+    </ul>
+    <div class="box box4">文字<span> and English</span></div>
+  </body>
+</html>
